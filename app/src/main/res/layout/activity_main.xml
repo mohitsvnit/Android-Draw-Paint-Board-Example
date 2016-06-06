@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.mohit.paint.MainActivity">
+
+    <include layout="@layout/appbar"
+        android:id="@+id/appbar"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment"
+        android:layout_below="@+id/appbar"
+        android:layout_alignLeft="@+id/appbar"
+        android:layout_alignStart="@+id/appbar"></RelativeLayout>
+
+    <com.mohit.paint.Panel
+        android:id="@+id/draw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment"
+        android:layout_alignLeft="@+id/fragment"
+        android:layout_alignStart="@+id/fragment" />
+</RelativeLayout>
